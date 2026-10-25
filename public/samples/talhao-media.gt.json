@@ -1,0 +1,210 @@
+{
+  "id": "media",
+  "rotulo": "Severidade média",
+  "arquivo": "talhao-media.png",
+  "cena": {
+    "largura_px": 1665,
+    "altura_px": 1500,
+    "px_por_cm": 5.0,
+    "cm_por_px": 0.2,
+    "largura_cm": 333.0,
+    "altura_cm": 300.0,
+    "area_m2": 9.99,
+    "nota": "Cena equivalente a uma armação do método manual (3,33 x 3,00 m)."
+  },
+  "referencia": {
+    "produtividade_t_ha": 74.4,
+    "perda_pct_alvo": 3.4,
+    "massa_colhida_equivalente_kg": 74.3256
+  },
+  "modelo_verdade": {
+    "formula": "m = rho x pi x (d/2)^2 x L x k_geom",
+    "rho_media_g_cm3": 1.02,
+    "rho_desvio": 0.07,
+    "nota": "Independente do modelo do estimador (densidade superficial sobre area projetada). O erro medido pelo prototipo e, portanto, real."
+  },
+  "real": {
+    "por_classe": {
+      "inteira": {
+        "contagem": 0,
+        "massa_kg": 0
+      },
+      "tolete": {
+        "contagem": 4,
+        "massa_kg": 0.9461
+      },
+      "toco": {
+        "contagem": 2,
+        "massa_kg": 0.5842
+      },
+      "ponta": {
+        "contagem": 1,
+        "massa_kg": 0.7895
+      },
+      "lasca": {
+        "contagem": 7,
+        "massa_kg": 0.1202
+      }
+    },
+    "massa_total_kg": 2.44,
+    "contagem_total": 14,
+    "perda_kg_ha": 2442.39,
+    "perda_pct_efetiva": 3.2828
+  },
+  "fragmentos": [
+    {
+      "classe": "toco",
+      "x_cm": 19.50878557736376,
+      "y_cm": 57.85033495977436,
+      "comprimento_cm": 10.08,
+      "largura_cm": 4.46,
+      "angulo_graus": 93.5,
+      "massa_kg": 0.18062,
+      "rho_g_cm3": 1.0841,
+      "diametro_cm": 4.373
+    },
+    {
+      "classe": "ponta",
+      "x_cm": 156.1635284427056,
+      "y_cm": 229.55685334044261,
+      "comprimento_cm": 71.04,
+      "largura_cm": 2.21,
+      "angulo_graus": 157.9,
+      "massa_kg": 0.78947,
+      "rho_g_cm3": 1.0457,
+      "diametro_cm": 2.48
+    },
+    {
+      "classe": "lasca",
+      "x_cm": 100.95881572716492,
+      "y_cm": 74.0140995647799,
+      "comprimento_cm": 10.51,
+      "largura_cm": 1.3,
+      "angulo_graus": 29.6,
+      "massa_kg": 0.03233,
+      "rho_g_cm3": 1.0362,
+      "diametro_cm": 1.705
+    },
+    {
+      "classe": "lasca",
+      "x_cm": 242.09531365141058,
+      "y_cm": 110.12272258497053,
+      "comprimento_cm": 5.19,
+      "largura_cm": 1.44,
+      "angulo_graus": 71.8,
+      "massa_kg": 0.0135,
+      "rho_g_cm3": 0.9794,
+      "diametro_cm": 1.612
+    },
+    {
+      "classe": "tolete",
+      "x_cm": 159.63158943253978,
+      "y_cm": 97.19401217084791,
+      "comprimento_cm": 33.73,
+      "largura_cm": 2.65,
+      "angulo_graus": 49.7,
+      "massa_kg": 0.28591,
+      "rho_g_cm3": 1.1236,
+      "diametro_cm": 3.099
+    },
+    {
+      "classe": "lasca",
+      "x_cm": 287.6281102246279,
+      "y_cm": 115.01722598612103,
+      "comprimento_cm": 4.7,
+      "largura_cm": 1.94,
+      "angulo_graus": 179.4,
+      "massa_kg": 0.00898,
+      "rho_g_cm3": 0.9587,
+      "diametro_cm": 1.396
+    },
+    {
+      "classe": "tolete",
+      "x_cm": 78.92953074042109,
+      "y_cm": 81.21913396348032,
+      "comprimento_cm": 33.37,
+      "largura_cm": 2.9,
+      "angulo_graus": 132.9,
+      "massa_kg": 0.2471,
+      "rho_g_cm3": 0.874,
+      "diametro_cm": 3.284
+    },
+    {
+      "classe": "toco",
+      "x_cm": 31.55687548898177,
+      "y_cm": 171.84507766398573,
+      "comprimento_cm": 17.5,
+      "largura_cm": 3.61,
+      "angulo_graus": 71.4,
+      "massa_kg": 0.40356,
+      "rho_g_cm3": 0.9383,
+      "diametro_cm": 5.333
+    },
+    {
+      "classe": "tolete",
+      "x_cm": 34.966106951139565,
+      "y_cm": 230.6815926441269,
+      "comprimento_cm": 26.2,
+      "largura_cm": 2.84,
+      "angulo_graus": 175.9,
+      "massa_kg": 0.18633,
+      "rho_g_cm3": 1.1281,
+      "diametro_cm": 2.833
+    },
+    {
+      "classe": "tolete",
+      "x_cm": 85.92365419121742,
+      "y_cm": 183.2262154135531,
+      "comprimento_cm": 33.82,
+      "largura_cm": 3.26,
+      "angulo_graus": 108.3,
+      "massa_kg": 0.2268,
+      "rho_g_cm3": 0.9517,
+      "diametro_cm": 2.995
+    },
+    {
+      "classe": "lasca",
+      "x_cm": 248.3202608818073,
+      "y_cm": 229.7781080029933,
+      "comprimento_cm": 11.11,
+      "largura_cm": 2.32,
+      "angulo_graus": 178.0,
+      "massa_kg": 0.02259,
+      "rho_g_cm3": 1.1213,
+      "diametro_cm": 1.333
+    },
+    {
+      "classe": "lasca",
+      "x_cm": 94.70040084828572,
+      "y_cm": 132.43449521742448,
+      "comprimento_cm": 4.8,
+      "largura_cm": 1.01,
+      "angulo_graus": 29.6,
+      "massa_kg": 0.00897,
+      "rho_g_cm3": 0.9716,
+      "diametro_cm": 1.372
+    },
+    {
+      "classe": "lasca",
+      "x_cm": 186.11877011663998,
+      "y_cm": 84.28017578513963,
+      "comprimento_cm": 6.04,
+      "largura_cm": 1.82,
+      "angulo_graus": 79.4,
+      "massa_kg": 0.01377,
+      "rho_g_cm3": 0.9367,
+      "diametro_cm": 1.544
+    },
+    {
+      "classe": "lasca",
+      "x_cm": 125.70448353635149,
+      "y_cm": 117.82658331239773,
+      "comprimento_cm": 11.07,
+      "largura_cm": 1.63,
+      "angulo_graus": 158.9,
+      "massa_kg": 0.02002,
+      "rho_g_cm3": 0.913,
+      "diametro_cm": 1.393
+    }
+  ]
+}

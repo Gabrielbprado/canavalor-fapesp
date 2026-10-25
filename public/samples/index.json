@@ -1,0 +1,34 @@
+[
+  {
+    "id": "baixa",
+    "rotulo": "Severidade baixa",
+    "arquivo": "talhao-baixa.png",
+    "perda_pct": 1.8071,
+    "massa_kg": 1.3432,
+    "fragmentos": 9
+  },
+  {
+    "id": "media",
+    "rotulo": "Severidade média",
+    "arquivo": "talhao-media.png",
+    "perda_pct": 3.2828,
+    "massa_kg": 2.44,
+    "fragmentos": 14
+  },
+  {
+    "id": "alta",
+    "rotulo": "Severidade alta",
+    "arquivo": "talhao-alta.png",
+    "perda_pct": 5.5832,
+    "massa_kg": 4.1498,
+    "fragmentos": 25
+  },
+  {
+    "id": "critica",
+    "rotulo": "Severidade crítica",
+    "arquivo": "talhao-critica.png",
+    "perda_pct": 8.2296,
+    "massa_kg": 6.1167,
+    "fragmentos": 32
+  }
+]

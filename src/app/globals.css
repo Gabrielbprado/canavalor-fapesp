@@ -1,26 +1,170 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/*
+ * CanaValor — linguagem visual.
+ *
+ * Referência: caderno de campo agronômico e publicação técnica. Papel quente
+ * com malha milimetrada, tinta escura, serifa editorial nos títulos e
+ * monoespaçada em todo número — porque aqui o número é o argumento. A paleta
+ * sai do próprio objeto: solo, palha, colmo, folha, e o vermelho da perda.
+ */
+
+@theme {
+  --color-papel: #f4f0e8;
+  --color-papel-alto: #fbf9f4;
+  --color-papel-fundo: #ebe5d9;
+  --color-linha: #d8d0be;
+  --color-linha-forte: #b9ae95;
+
+  --color-tinta: #1c1814;
+  --color-tinta-media: #4a4238;
+  --color-tinta-fraca: #7a7062;
+
+  --color-solo: #6b5137;
+  --color-palha: #c9a227;
+  --color-colmo: #d9c04a;
+  --color-folha: #4a7c59;
+  --color-perda: #a83f32;
+  --color-agua: #2c5f7c;
+
+  --color-baixo: #4a7c59;
+  --color-medio: #c9922e;
+  --color-alto: #a83f32;
+
+  --font-display: var(--fonte-display), Georgia, 'Times New Roman', serif;
+  --font-corpo: var(--fonte-corpo), ui-sans-serif, system-ui, sans-serif;
+  --font-dados: var(--fonte-dados), ui-monospace, 'SF Mono', Menlo, monospace;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--font-corpo);
+  font-feature-settings: 'ss01', 'cv01';
+  -webkit-font-smoothing: antialiased;
+
+  /* Malha milimetrada: 5 mm finos, 25 mm marcados. Fica no limiar da percepção
+     — presente o bastante para dar textura de papel técnico, discreta o
+     bastante para não competir com os dados. */
+  background-image:
+    linear-gradient(to right, rgba(120, 105, 80, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 105, 80, 0.045) 1px, transparent 1px),
+    linear-gradient(to right, rgba(120, 105, 80, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 105, 80, 0.08) 1px, transparent 1px);
+  background-size:
+    18px 18px,
+    18px 18px,
+    90px 90px,
+    90px 90px;
+}
+
+/* Todo número é monoespaçado e alinhado por tabela: colunas de dados só se
+   comparam a olho quando os dígitos ocupam a mesma largura. */
+.dado {
+  font-family: var(--font-dados);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.rotulo {
+  font-family: var(--font-dados);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-tinta-fraca);
+}
+
+.cartao {
+  background-color: var(--color-papel-alto);
+  border: 1px solid var(--color-linha);
+  box-shadow: 0 1px 0 rgba(28, 24, 20, 0.04);
+}
+
+/* Marca d'água diagonal reforçando que todo dado da tela é sintético. */
+.marca-sintetica::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 22px,
+    rgba(168, 63, 50, 0.028) 22px,
+    rgba(168, 63, 50, 0.028) 44px
+  );
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.surgir {
+  animation: surgir 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes tracar {
+  from {
+    stroke-dashoffset: var(--traco);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surgir,
+  [class*='animate-'] {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background-color: rgba(201, 162, 39, 0.32);
+}
+
+input[type='range'] {
+  appearance: none;
+  height: 2px;
+  background: var(--color-linha-forte);
+  border-radius: 2px;
+}
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-tinta);
+  border: 2px solid var(--color-papel-alto);
+  cursor: grab;
+  box-shadow: 0 1px 3px rgba(28, 24, 20, 0.3);
+}
+input[type='range']::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+input[type='range']::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--color-tinta);
+  border: 2px solid var(--color-papel-alto);
+  cursor: grab;
 }
